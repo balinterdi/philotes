@@ -2,7 +2,7 @@ if defined?(Merb::Plugins)
 
   $:.unshift File.dirname(__FILE__)
 
-  load_dependency 'merb-slices'
+  load_dependency 'merb-slices', self
   Merb::Plugins.add_rakefiles "philotes/merbtasks", "philotes/slicetasks", "philotes/spectasks"
 
   # Register the Slice for the current host application

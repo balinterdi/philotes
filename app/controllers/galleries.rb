@@ -1,4 +1,4 @@
-class Galleries < Application
+class Philotes::Galleries < Philotes::Application
 
   # ...and remember, everything returned from an action
   # goes to the client...

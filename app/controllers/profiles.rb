@@ -1,4 +1,4 @@
-class Profiles < Application
+class Philotes::Profiles < Philotes::Application
 
   # ...and remember, everything returned from an action
   # goes to the client...

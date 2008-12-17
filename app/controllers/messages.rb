@@ -1,4 +1,4 @@
-class Messages < Application
+class Philotes::Messages < Philotes::Application
 
   # ...and remember, everything returned from an action
   # goes to the client...

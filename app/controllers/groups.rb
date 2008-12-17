@@ -1,4 +1,4 @@
-class Groups < Application
+class Philotes::Groups < Philotes::Application
 
   # ...and remember, everything returned from an action
   # goes to the client...

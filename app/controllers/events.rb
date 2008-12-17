@@ -1,4 +1,4 @@
-class Events < Application
+class Philotes::Events < Philotes::Application
 
   # ...and remember, everything returned from an action
   # goes to the client...

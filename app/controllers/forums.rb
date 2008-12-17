@@ -1,4 +1,4 @@
-class Forums < Application
+class Philotes::Forums < Philotes::Application
 
   # ...and remember, everything returned from an action
   # goes to the client...
