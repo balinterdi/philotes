@@ -2,20 +2,20 @@ require File.join( File.dirname(__FILE__), '..', "spec_helper" )
 
 describe Post do
   
-  it "should have a user" do
-    pending
+  before(:each) do
+    @post = Post.new
   end
   
   it "should have a user" do
-    pending
+    @post.should have_at_least(1).errors_on(:user)
   end
   
   it "should have a forum" do
-    pending
+    @post.should have_at_least(1).errors_on(:forum)
   end
   
   it "should have a body" do
-    pending
+    @post.should have_at_least(1).errors_on(:body)
   end
 
 end

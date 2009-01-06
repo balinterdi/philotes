@@ -22,17 +22,17 @@ namespace :slices do
       end
     end
     
-    desc "Copy stub files to host application"
-    task :stubs do
-      puts "Copying stubs for Philotes - resolves any collisions"
-      copied, preserved = Philotes.mirror_stubs!
-      puts "- no files to copy" if copied.empty? && preserved.empty?
-      copied.each { |f| puts "- copied #{f}" }
-      preserved.each { |f| puts "! preserved override as #{f}" }
-    end
+    # desc "Copy stub files to host application"
+    # task :stubs do
+    #   puts "Copying stubs for Philotes - resolves any collisions"
+    #   copied, preserved = Philotes.mirror_stubs!
+    #   puts "- no files to copy" if copied.empty? && preserved.empty?
+    #   copied.each { |f| puts "- copied #{f}" }
+    #   preserved.each { |f| puts "! preserved override as #{f}" }
+    # end
     
-    desc "Copy stub files and views to host application"
-    task :patch => [ "stubs", "freeze:views" ]
+    # desc "Copy stub files and views to host application"
+    # task :patch => [ "stubs", "freeze:views" ]
   
     desc "Copy public assets to host application"
     task :copy_assets do
@@ -52,11 +52,11 @@ namespace :slices do
 
     namespace :freeze do
       
-      desc "Freezes Philotes by installing the gem into application/gems"
-      task :gem do
-        ENV["GEM"] ||= "philotes"
-        Rake::Task['slices:install_as_gem'].invoke
-      end
+      # desc "Freezes Philotes by installing the gem into application/gems"
+      # task :gem do
+      #   ENV["GEM"] ||= "philotes"
+      #   Rake::Task['slices:install_as_gem'].invoke
+      # end
       
       desc "Freezes Philotes by copying all files from philotes/app to your application"
       task :app do

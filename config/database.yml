@@ -1,0 +1,4 @@
+development: &defaults
+  # These are the settings for repository :default
+  adapter:  sqlite3
+  database: philotes_development.db

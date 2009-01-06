@@ -1,5 +1,5 @@
 #
-# ==== Standalone Philotes configuration
+# ==== Standalone MerbTestSlice configuration
 # 
 # This configuration/environment file is only loaded by bin/slice, which can be 
 # used during development of the slice. It has no effect on this slice being
@@ -28,7 +28,7 @@ Merb::Config.use do |c|
   # c[:session_id_key] = '_session_id'
   
   # The session_secret_key is only required for the cookie session store.
-  c[:session_secret_key]  = '18d5e5c2c0e440dc4289e73d4a1aaaaf66c00586'
+  c[:session_secret_key]  = '38af0e95df9eb570a850b3e0a75d60dc336154cd'
   
   # There are various options here, by default Merb comes with 'cookie', 
   # 'memory', 'memcache' or 'container'.  

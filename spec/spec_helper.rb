@@ -7,6 +7,9 @@ require 'spec'
 Merb::Plugins.config[:merb_slices][:auto_register] = true
 Merb::Plugins.config[:merb_slices][:search_path]   = File.join(File.dirname(__FILE__), '..', 'lib', 'philotes.rb')
 
+# Require philotes.rb explicitly so any dependencies are loaded
+require Merb::Plugins.config[:merb_slices][:search_path]
+
 # Using Merb.root below makes sure that the correct root is set for
 # - testing standalone, without being installed as a gem and no host application
 # - testing from within the host application; its root will be used
@@ -14,7 +17,6 @@ Merb.start_environment(
   :testing => true, 
   :adapter => 'runner', 
   :environment => ENV['MERB_ENV'] || 'test',
-  :merb_root => Merb.root,
   :session_store => 'memory'
 )
 
@@ -41,4 +43,16 @@ Spec::Runner.configure do |config|
   config.include(Merb::Test::RouteHelper)
   config.include(Merb::Test::ControllerHelper)
   config.include(Merb::Test::SliceHelper)
+end
+
+# You can add your own helpers here
+#
+Merb::Test.add_helpers do
+  def mount_slice
+    Merb::Router.prepare { add_slice(:Philotes, "philotes") } if standalone?
+  end
+
+  def dismount_slice
+    Merb::Router.reset! if standalone?
+  end
 end
