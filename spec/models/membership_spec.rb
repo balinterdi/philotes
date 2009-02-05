@@ -17,5 +17,22 @@ describe Membership do
   it "should have a status" do
     @membership.should have_at_least(1).errors_on(:status)
   end
+  
+  it "should identify if user is an admin" do
+    @membership.should_not be_admin
+    @membership.admin = true
+    @membership.should be_admin
+  end
+  
+  it "should not allow membership to be deleted if there are no other admins" do
+    # TODO: Should raise an error
+    @membership.destroy!
+  end
+  
+  it "should not allow membership to remove admin if there are no other admins" do
+    # TODO: Should raise an error
+    @membership.admin = false
+    @membership.save!
+  end
 
 end

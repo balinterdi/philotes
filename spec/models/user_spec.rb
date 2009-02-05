@@ -18,7 +18,7 @@ describe User do
     @user.should have_at_least(1).errors_on(:password)
   end
   
-  it "should have activation before authenticating" do
+  it "should have been activated before authenticating" do
     pending
   end
   

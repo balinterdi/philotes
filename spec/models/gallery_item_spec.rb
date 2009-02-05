@@ -10,7 +10,8 @@ describe GalleryItem do
     @gallery_item.should have_at_least(1).errors_on(:filename)
   end
   
-  it "should file" do
+  it "should have a file" do
+    @gallery_item.should  have_at_least(1).errors_on(:file)
     pending
   end
   

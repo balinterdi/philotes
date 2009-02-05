@@ -21,11 +21,16 @@ describe Group do
   end
   
   it "should have an admin" do
+    @group.admins.should == @admins
     pending
   end
   
   it "should be joinable" do
     @group.join!(@user)
+  end
+  
+  it "should be leavable" do
+    @group.leave!(@user)
   end
     
   it "should determine if a user is a member" do
