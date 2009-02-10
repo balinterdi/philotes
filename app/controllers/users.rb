@@ -1,9 +1,28 @@
 class Philotes::Users < Philotes::Application
-
-  # ...and remember, everything returned from an action
-  # goes to the client...
-  def index
+    
+  # GET /users/:id
+  def show
     render
   end
-  
+
+  # GET /users/new
+  def new
+    render
+  end
+
+  # GET /users/:id/edit
+  def edit
+    render
+  end
+
+  # POST /users
+  def create
+    render
+  end
+
+  # PUT /users/:id
+  def update
+    render
+  end
+
 end

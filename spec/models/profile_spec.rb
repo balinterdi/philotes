@@ -5,5 +5,5 @@ describe Profile do
   it "should have a user" do
     pending
   end
-  
+    
 end

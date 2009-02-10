@@ -2,7 +2,11 @@ if defined?(Merb::Plugins)
 
   $:.unshift File.dirname(__FILE__)
 
+<<<<<<< HEAD:lib/philotes.rb
   load_dependency 'merb-slices', self
+=======
+  dependency 'merb-slices', :immediate => true
+>>>>>>> 0f866d245ea4126d2ce62bf30d1d91105d8498ad:lib/philotes.rb
   Merb::Plugins.add_rakefiles "philotes/merbtasks", "philotes/slicetasks", "philotes/spectasks"
 
   # Register the Slice for the current host application

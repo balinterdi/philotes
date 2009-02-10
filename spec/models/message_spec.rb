@@ -1,21 +1,25 @@
 require File.join( File.dirname(__FILE__), '..', "spec_helper" )
 
 describe Message do
+  
+  before(:each) do
+    @message = Message.new
+  end
 
   it "should have a subject" do
-    pending
+    @message.should have_at_least(1).errors_on(:subject)
   end
   
-  it "should have a posted at date" do
-    pending
+  it "should have a posted at datetime" do
+    @message.should have_at_least(1).errors_on(:posted_at)
   end
   
   it "should have a body" do
-    pending
+    @message.should have_at_least(1).errors_on(:body)
   end
   
   it "should have a sender" do
-    pending
+    @message.should have_at_least(1).errors_on(:sender)
   end
 
 end
