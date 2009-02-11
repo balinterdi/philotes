@@ -1,4 +1,4 @@
-class GalleryItems < Application
+class Philotes::GalleryItems < Merb::Controller
   
   # GET /gallery_items
   def index

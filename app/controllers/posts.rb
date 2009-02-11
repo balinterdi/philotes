@@ -1,4 +1,4 @@
-class Posts < Application
+class Philotes::Posts < Merb::Controller
   
   # GET /posts
   def index

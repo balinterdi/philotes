@@ -1,4 +1,4 @@
-class Memberships < Application
+class Philotes::Memberships < Merb::Controller
   
   # GET /memberships
   def index

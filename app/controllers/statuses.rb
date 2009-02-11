@@ -1,4 +1,4 @@
-class Statuses < Application
+class Philotes::Statuses < Merb::Controller
   
   # GET /statuses
   def index

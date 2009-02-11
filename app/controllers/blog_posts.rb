@@ -1,4 +1,4 @@
-class BlogPosts < Application
+class Philotes::BlogPosts < Merb::Controller
   
   # GET /blog_posts/:id
   def show

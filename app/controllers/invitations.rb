@@ -1,4 +1,4 @@
-class Invitations < Application
+class Philotes::Invitations < Merb::Controller
   
   # GET /invitations
   def index

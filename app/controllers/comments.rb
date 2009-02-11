@@ -1,4 +1,4 @@
-class Comments < Application
+class Philotes::Comments < Merb::Controller
   
   # GET /comments/new
   def new

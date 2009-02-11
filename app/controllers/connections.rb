@@ -1,4 +1,4 @@
-class Connections < Application
+class Philotes::Connections < Merb::Controller
   
   # GET /connections
   def index
