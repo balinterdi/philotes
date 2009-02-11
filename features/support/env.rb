@@ -1,5 +1,6 @@
 # Sets up the Merb environment for Cucumber (thanks to krzys and roman)
 require "rubygems"
+require File.join(File.dirname(__FILE__), "..", "..", "spec", "spec_helper.rb")
 
 # Add the local gems dir if found within the app root; any dependencies loaded
 # hereafter will try to load from the local gems before loading system gems.
