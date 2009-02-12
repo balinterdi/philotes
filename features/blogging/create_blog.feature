@@ -16,4 +16,4 @@ Feature: create blog
     When I go to /blogs/new
     And I press "Create blog"
     Then I should see an error message
-    # Then no new blog should be created
+    # Then a new blog should not be created
