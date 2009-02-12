@@ -5,7 +5,8 @@ Feature: edit blog
 
   Scenario: Publish blog
     Given I am logged in as jonathan
-    Given I go to /blogs/1/edit
+    Given there is a blog called "My shiny new blog"
+    When I go to "My shiny new blog"'s edit page
     When I press "Publish blog"
     Then I should see a confirmation message
-    Then the blog 1 should be public
+    Then the blog called "My shiny new blog" should be public

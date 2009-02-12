@@ -10,7 +10,8 @@ Feature: edit blog post
     And I press "Save"
     Then I should see "This is better now."
     Then I should see a confirmation message
-    Then the blog post 1 should be draft
+    # Then /^the blog post titled "(.*)" should be draft/
+    Then the blog post titled 1 should be draft
 
   Scenario Outline: Publish blog post
     Given I am logged in as jonathan
