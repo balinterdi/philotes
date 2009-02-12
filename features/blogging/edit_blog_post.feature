@@ -5,19 +5,18 @@ Feature: edit blog post
 
   Scenario: Successful edit
     Given I am logged in as jonathan
-    Given I go to /blogs/1/posts/1/edit
-    When I fill in "body" with "This is better now."
+    Given there is a blog post titled "I feel good"
+    Given I go to the blog post titled "I feel good"'s edit page
+    When I fill in "body" with "I like the sun shining and the birds singing."
     And I press "Save"
-    Then I should see "This is better now."
+    Then I should see "I like the sun shining and the birds singing."
     Then I should see a confirmation message
-    # Then /^the blog post titled "(.*)" should be draft/
-    Then the blog post titled 1 should be draft
+    Then the blog post titled "I feel good" should be draft
 
-  Scenario Outline: Publish blog post
+  Scenario: Publish blog post
     Given I am logged in as jonathan
-    # Given there is a draft blog post
-    Given I go to /blogs/1/posts/1/edit # that post should be a draft at this point
+    Given there is a draft blog post titled "I feel good"
+    Given I go to the blog post titled "I feel good"'s edit page    
     When I press "Publish"
     Then I should see a confirmation message
-    Then the blog post 1 should be published
-    Then Bush should step down
+    Then the blog post titled "I feel good" should be published
