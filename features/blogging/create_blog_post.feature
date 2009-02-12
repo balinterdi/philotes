@@ -3,14 +3,14 @@ Feature: create blog post
   As a blogger
   I want to be able to create posts on my blog
   
-  Scenario: Successful post creation
+  Scenario: Successful draft post creation
     Given I am logged in as jonathan
     Given I go to /blogs/1/blog_posts/new
     When I fill in "title" with "The future of Ruby web frameworks"
     And I fill in "body" with "There are lots of them and they are cool and easy to work with."
-    And I press "Create post"
+    And I press "Save"
     Then I should see a confirmation message
-    # Then the blog post should be created
+    # Then the blog post should be created as draft
   
   Scenario: Failed post creation because of empty title
     Given I am logged in as jonathan
