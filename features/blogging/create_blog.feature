@@ -10,6 +10,7 @@ Feature: create blog
     And I press "Create blog"
     Then I should see a confirmation message
     # Then a new blog should be created
+    Then the new blog should be private
     
   Scenario: Failed blog creation
     Given I am logged in as jonathan
