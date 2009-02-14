@@ -9,4 +9,4 @@ Feature: edit blog
     When I go to the "All about me" blog's edit page
     And I press "Publish blog"
     Then I should see a confirmation message
-    Then the blog called "All about me" should be public
+    Then the "All about me" blog should be public

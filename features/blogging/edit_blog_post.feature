@@ -11,7 +11,7 @@ Feature: edit blog post
     And I press "Save"
     Then I should see "I like the sun shining and the birds singing."
     Then I should see a confirmation message
-    Then the blog post titled "I feel good" should be draft
+    Then the "I feel good" blog post should be draft
 
   Scenario: Publish blog post
     Given I am logged in as jonathan
@@ -19,4 +19,4 @@ Feature: edit blog post
     When I go to the "I feel good" blog post's edit page
     And I press "Publish"
     Then I should see a confirmation message
-    Then the blog post titled "I feel good" should be published
+    Then the "I feel good" blog post should be published
