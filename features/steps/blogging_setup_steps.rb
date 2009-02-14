@@ -3,5 +3,9 @@ Given /there is a blog called "(.*)"/ do |blog_name|
 end
 
 Given /there is a (draft)?\s*blog post titled "(.*)"$/ do |state, post_title|
-  BlogPost.create(:title => post_title, :state => state) unless BlogPost.first(:title => post_title)
+  BlogPost.create(:title => post_title, :state => state) unless BlogPost.first(:title => post_title, :state => state)
+end
+
+
+Given /^I go to the blog post titled "I feel good"'s edit page$/ do
 end
