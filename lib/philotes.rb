@@ -5,6 +5,7 @@ if defined?(Merb::Plugins)
   # NOTE: not sure if load_dependency or dependency 'merb-slices', ...
   # is the current "good way" of adding the dep.
   load_dependency 'merb-slices', self
+  load_dependency 'dm-core', self
   # dependency 'merb-slices', :immediate => true
   Merb::Plugins.add_rakefiles "philotes/merbtasks", "philotes/slicetasks", "philotes/spectasks"
 
