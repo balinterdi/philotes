@@ -9,4 +9,5 @@ Feature: Delete message
     When I go to the my messages page
     And I check "message"
     And I press "Delete"
+    Then I should see a confirmation message
     Then the message with "Thanks, dude" as subject should be deleted

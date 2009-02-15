@@ -9,6 +9,7 @@ Feature: Register user
     And I fill in "first_name" with "<first_name>"
     And I fill in "last_name" with "<last_name>"
     And I fill in "password" with "<password>"
+    Then I should see a confirmation message
     Then a user with "<email>" as email should be created
     Then the new user should not be activated
     
@@ -23,6 +24,7 @@ Feature: Register user
       And I fill in "first_name" with "<first_name>"
       And I fill in "last_name" with "<last_name>"
       And I fill in "password" with "<password>"
+      Then I should see an error message
       Then a user with "<email>" as email should not be created
 
       Examples:
