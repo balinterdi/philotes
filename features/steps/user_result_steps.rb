@@ -14,3 +14,7 @@ end
 Then /^"(.*)" should be activated$/ do |email|
   User.first(:email => email).should be_activated
 end
+
+Then /my password should be "(.*)"/ do |password|
+  current_user.password.should == password
+end
