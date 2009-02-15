@@ -6,7 +6,7 @@ Feature: Delete message
   Scenario: delete message
     Given I am logged in as jonathan
     Given I have a message with "Thanks, dude" as subject
-    When I go to the my messages page
+    When I go to the "my messages" page
     And I check "message"
     And I press "Delete"
     Then I should see a confirmation message

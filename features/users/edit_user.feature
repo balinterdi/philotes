@@ -5,7 +5,7 @@ Feature: Edit user attributes
   
   Scenario Outline: Change password successfully
     Given I am logged in as <login>
-    When I go to the edit user page
+    When I go to the "edit user" page
     And I fill in "old_password" with "<old_password>"
     And I fill in "new_password" with "<new_password>"
     And I fill in "new_password_confirmation" with "<new_password_confirmation>"
@@ -19,7 +19,7 @@ Feature: Edit user attributes
       
   Scenario Outline: Failed change password
     Given I am logged in as <login>
-    When I go to the edit user page
+    When I go to the "edit user" page
     And I fill in "old_password" with "<old_password>"
     And I fill in "new_password" with "<new_password>"
     And I fill in "new_password_confirmation" with "<new_password_confirmation>"

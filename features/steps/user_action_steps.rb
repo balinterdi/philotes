@@ -1,5 +1,9 @@
-When /^I go to the register page$/ do
+When /^I go to the "register" page$/ do
   visit '/register'
+end
+
+When /^I go to the "edit user" page$/ do
+  visit resource(current_user, :edit)
 end
 
 When /^the activation link for "(.*)" is followed$/ do |email|

@@ -4,7 +4,7 @@ Feature: Register user
   I want to be able to register a user
   
   Scenario Outline: Successful registration
-    When I go to the register page
+    When I go to the "register" page
     And I fill in "email" with "<email>"
     And I fill in "first_name" with "<first_name>"
     And I fill in "last_name" with "<last_name>"
@@ -19,7 +19,7 @@ Feature: Register user
       | alice@example.com | Alice            | Keys         | alicehush   | alicehush             |
     
     Scenario Outline: Failed registration
-      When I go to the register page
+      When I go to the "register" page
       And I fill in "email" with "<email>"
       And I fill in "first_name" with "<first_name>"
       And I fill in "last_name" with "<last_name>"

@@ -5,7 +5,7 @@ Feature: create message
 
   Scenario: new message
     Given I am logged in as jonathan
-    When I go to the my messages page
+    When I go to the "my messages" page
     And I press "Compose message"
     And I fill in "to" with "alice"
     And I fill in "subject" with "hi there, Alice"
@@ -17,7 +17,7 @@ Feature: create message
 
   Scenario: save message as draft
     Given I am logged in as jonathan
-    When I go to the my messages page
+    When I go to the "my messages" page
     And I press "Compose message"
     And I fill in "to" with "alice"
     And I fill in "subject" with "hi there, Alice"
@@ -29,7 +29,7 @@ Feature: create message
   Scenario: reply to message
     Given I am logged in as alice
     Given jonathan sends a message to me with "hi there, Alice" as subject
-    When I go to the my messages page
+    When I go to the "my messages" page
     And I follow "hi there, Alice"
     And I press "Reply"
     And I fill in "subject" with "hey Jonathan"
