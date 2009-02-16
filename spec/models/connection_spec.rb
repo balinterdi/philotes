@@ -30,7 +30,7 @@ describe Connection do
     pending
   end
   
-  it "should be able to define a public note on the connection" do
+  it "should be able to define a comment on the connection" do
     pending
   end
 
