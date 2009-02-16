@@ -1,5 +1,5 @@
 Feature: Delete message
-  In order to keep my inbox tidy
+  In order to keep my inbox clean and tidy
   As a user
   I want to be able to delete messages
   
@@ -7,6 +7,7 @@ Feature: Delete message
     Given I am logged in as jonathan
     Given I have a message with "Thanks, dude" as subject
     When I go to the "my messages" page
+     #TODO: the checkbox name should be put here
     And I check "message"
     And I press "Delete"
     Then I should see a confirmation message
