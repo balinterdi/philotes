@@ -4,8 +4,12 @@ Then /^there should be a connection between "(.*)" and "(.*)"$/ do |requester, r
   Connection.first(:requester => requester, :requestee => requestee).should_not be_nil
 end
 
-Then /^the new connection should be (.*)$/ do |state|
+Then /^the new connection should be (pending)$/ do |state|
   Connection.all(:order => [:created_at]).reverse.first.state.should == state
+end
+
+Then /^the new connection should be of (.*) type$/ do |type|
+  Connection.all(:order => [:created_at]).reverse.first.type.should == type
 end
 
 Then /^the connection between "(.*)" and "(.*)" should be (.*)$/ do |requester, requestee, state|
