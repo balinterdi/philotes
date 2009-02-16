@@ -24,3 +24,8 @@ Then /^I should be a member of the "(.*)" group$/ do |name|
   group = Group.first(:name => name)
   group.members.should include(current_user)
 end
+
+Then /^I should not be a member of the "(.*)" group$/ do |name|
+  group = Group.first(:name => name)
+  group.members.should_not include(current_user)
+end
