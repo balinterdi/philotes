@@ -17,3 +17,5 @@ Feature: Create comment
     And I follow "Comment Alice's status"
     And I fill in "body" with "Cheer up, let's go see a movie"
     Then "alice"'s status should have the "Cheer up, let's go see a movie" comment
+    
+#TODO: leave gallery item for later

@@ -6,3 +6,7 @@ end
 When /^I go to the "my dashboard" page$/ do
   visit '/dashboard'
 end
+
+When /^I delete the "(.*)" comment$/ do |body|
+  Comment.first(body => :body).destroy!
+end
