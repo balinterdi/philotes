@@ -7,3 +7,7 @@ end
 Then /^the new connection should be (.*)$/ do |state|
   Connection.all(:order => [:created_at]).reverse.first.state.should == state
 end
+
+Then /^the connection between "(.*)" and "(.*)" should be (.*)$/ do |requester, requestee, state|
+  Connection.first(:requester => requester, :requestee => requestee, :state => state).should_not be_nil
+end
