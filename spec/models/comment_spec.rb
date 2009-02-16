@@ -9,6 +9,10 @@ describe Comment do
   it "should have a user" do
     pending
   end
+
+  it "should have an item it comments on" do
+    pending
+  end
   
   it "should have a posted at date" do
     pending
