@@ -11,12 +11,16 @@ Then /^I should be the "(.*)" event organizer$/ do |name|
 end
 
 Then /^I should be among the "(.*)" event attenders$/ do |name|
-  Event.first(:name => name).attenders.should.include(current_user)
+  Event.first(:name => name).attenders.should include(current_user)
+end
+
+Then /^I should not be among the "(.*)" event attenders$/ do
+  Event.first(:name => name).attenders.should_not include(current_user)
 end
 
 #TODO: move this to invitation_result_steps once there are invitation features
-Then /^the invitation should be accepted$/ do
-  Invitation.first.should be_accepted
+Then /^the invitation should be (pending|accepted|rejected)$/ do |state|
+  Invitation.first.state.should == state
 end
 
 Then /^an invitation should be created for "(.*)" to the event$/ do |login|

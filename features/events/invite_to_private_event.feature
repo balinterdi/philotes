@@ -14,6 +14,7 @@ Feature: Invitation for private events
     And I press "Send invitations"
     Then I should see a confirmation message
     Then an invitation should be created for "alice" to the event
+    Then the invitation should be pending
 
   Scenario: See the invitation for an event
     Given I am logged in as "alice"
@@ -30,3 +31,14 @@ Feature: Invitation for private events
     Then I should see a confirmation message
     Then the invitation should be accepted
     And I should be among the "Ruby Barcamp" event attenders
+    
+  Scenario: Turn down attendance for the event
+    Given I am logged in as "alice"
+    And I have an invitation for the "Ruby Barcamp" event
+    When I go to the "my events" page
+    And I follow "Ruby Barcamp"
+    And I press "I will not attend"
+    Then I should see a confirmation message
+    Then the invitation should be rejected
+    And I should not be among the "Ruby Barcamp" event attenders
+    
