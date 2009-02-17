@@ -8,5 +8,6 @@ Feature: Create forum
     When I go to the "my forums" page
     And I fill in "name" with "Agora"
     And I press "Create forum"
-    Then a new forum should be created
+    Then I should see a confirmation message
+    And a new forum should be created
     And I should be the owner of the forum

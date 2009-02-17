@@ -8,4 +8,6 @@ Feature: Create gallery
     When I go to the "my galleries" page
     And I fill in "name" with "Nice pictures from Nepal"
     And I press "Create gallery"
-    Then the "Nice pictures from Nepal" gallery should be created
+    Then I should see a confirmation message
+    And the "Nice pictures from Nepal" gallery should be created
+    And the gallery should belong to me
