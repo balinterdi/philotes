@@ -4,7 +4,7 @@ Feature: create blog post
   I want to be able to create posts on my blog
   
   Scenario: Successful draft post creation
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     Given I go to /blogs/1/blog_posts/new
     When I fill in "title" with "The future of Ruby web frameworks"
     And I fill in "body" with "There are lots of them and they are cool and easy to work with."
@@ -13,7 +13,7 @@ Feature: create blog post
     # Then the blog post should be created as draft
   
   Scenario: Failed post creation because of empty title
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     Given I go to /blogs/1/blog_posts/new
     When I fill in "body" with "There are lots of them and they are cool and easy to work with."
     And I press "Create post"
@@ -21,7 +21,7 @@ Feature: create blog post
     # Then the blog post should not be created
 
   Scenario: Failed post creation because of empty body
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     Given I go to /blogs/1/blog_posts/new
     When I fill in "title" with "The future of Ruby web frameworks"
     And I press "Create post"

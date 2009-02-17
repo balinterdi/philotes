@@ -4,7 +4,7 @@ Feature: create message
   I want to be able to write to them
 
   Scenario: new message
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     When I go to the "my messages" page
     And I press "Compose message"
     And I fill in "to" with "alice"
@@ -16,7 +16,7 @@ Feature: create message
     Then a message with "hi there, Alice" as subject should be in my outbox
 
   Scenario: save message as draft
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     When I go to the "my messages" page
     And I press "Compose message"
     And I fill in "to" with "alice"
@@ -27,7 +27,7 @@ Feature: create message
     Then a message with "hi there, Alice" as subject should be in my Drafts folder
 
   Scenario: reply to message
-    Given I am logged in as alice
+    Given I am logged in as "alice"
     Given jonathan sends a message to me with "hi there, Alice" as subject
     When I go to the "my messages" page
     And I follow "hi there, Alice"

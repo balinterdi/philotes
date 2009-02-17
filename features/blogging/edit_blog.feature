@@ -4,7 +4,7 @@ Feature: edit blog
   I want to be able to publish my blog
 
   Scenario: Publish blog
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     And there is a blog called "All about me"
     When I go to the "All about me" blog's edit page
     And I press "Publish blog"

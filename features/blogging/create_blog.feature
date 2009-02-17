@@ -4,7 +4,7 @@ Feature: create blog
   I want to create a blog
   
   Scenario: Successful blog creation
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     When I go to /blogs/new
     When I fill in "Name" with "Merb and Rails - two good friends"
     And I press "Create blog"
@@ -13,7 +13,7 @@ Feature: create blog
     Then the new blog should be private
     
   Scenario: Failed blog creation
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     When I go to /blogs/new
     And I press "Create blog"
     Then I should see an error message

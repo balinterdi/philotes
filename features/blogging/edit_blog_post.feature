@@ -4,7 +4,7 @@ Feature: edit blog post
   I want to be able to edit blog posts
 
   Scenario: Successful edit
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     And there is a blog post titled "I feel good"
     When I go to the "I feel good" blog post's edit page
     And I fill in "body" with "I like the sun shining and the birds singing."
@@ -14,7 +14,7 @@ Feature: edit blog post
     Then the "I feel good" blog post should be draft
 
   Scenario: Publish blog post
-    Given I am logged in as jonathan
+    Given I am logged in as "jonathan"
     And there is a draft blog post titled "I feel good"
     When I go to the "I feel good" blog post's edit page
     And I press "Publish"
