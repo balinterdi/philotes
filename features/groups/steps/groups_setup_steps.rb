@@ -5,10 +5,10 @@ end
 
 Given /^I have an invitation to join the "(.*)" group$/ do |name|
   group = Group.first(:name => name)
-  GroupInvitation.create(:group => group, :invitee => current_user)
+  Invitation.create(:to => group, :invitee => current_user)
 end
 
 Given /^I am member of the "(.*)" group$/ do |name|
   group = Group.first(:name => name)
-  group.memberships << GroupMembership.create(:group => group, :member => current_user)
+  group.memberships << Membership.create(:of => group, :member => current_user)
 end

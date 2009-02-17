@@ -5,6 +5,7 @@ Feature: Invitation for private events
 
   Scenario: Create invitation for a private event
     Given I am logged in as "jonathan"
+    And there is a user called "alice"
     And there is a private "Ruby Barcamp" event
     When I go to the event's "show" page
     And I press "Create invitations"
