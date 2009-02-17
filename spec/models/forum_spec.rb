@@ -6,4 +6,8 @@ describe Forum do
     pending
   end
 
+  it "should have an owner" do
+    pending
+  end
+
 end
