@@ -1,5 +1,5 @@
-Given /there is a blog called "(.*)"/ do |blog_name|
-  Blog.first_or_create(:name => blog_name)
+Given /^there is a blog$/ do
+  Blog.create
 end
 
 Given /there is a (draft|published)?\s*blog post titled "(.*)"$/ do |state, post_title|
