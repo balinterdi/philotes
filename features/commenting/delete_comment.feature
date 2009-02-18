@@ -5,7 +5,8 @@ Feature: Delete comment
   
   Scenario: Comment deletion by admin
     Given I am logged in as an admin user
-    And there is a blog post titled "Introducing the new iPhone"
+    And there is a blog post
+    And the blog post's title is "Introducing the new iPhone"
     And there is a comment that says "wOOt!" on the "Introducing the new iPhone" blog post
     When I go to the "show" page of the "Introducing the new iPhone" blog post
     And I delete the "wOOt!" comment

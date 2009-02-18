@@ -5,7 +5,8 @@ Feature: Create comment
 
   Scenario: Leave a comment on a blog post
     Given I am logged in as "jonathan"
-    And there is a published blog post titled "On trading stock"
+    And there is a published blog post
+    And the blog post's title is "On trading stock"
     When I go to the "show" page of the "On trading stock" blog post
     And I make a comment that says "I realized I have to do it wisely"
     Then the "On trading stock" blog post should have a "I realized I have to do it wisely" comment

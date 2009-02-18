@@ -5,18 +5,19 @@ Feature: edit blog post
 
   Scenario: Successful edit
     Given I am logged in as "jonathan"
-    And there is a blog post titled "I feel good"
-    When I go to the "I feel good" blog post's edit page
-    And I fill in "body" with "I like the sun shining and the birds singing."
+    And there is a blog post
+    And the blog post's title is "I feel good"
+    When I go to the blog post's edit page
+    And I fill in "title" with "I feel even better"
     And I press "Save"
-    Then I should see "I like the sun shining and the birds singing."
-    Then I should see a confirmation message
-    Then the blog post should be draft
+    Then I should see "I feel even better"
+    And I should see a confirmation message
+    And the blog post should be draft
 
   Scenario: Publish blog post
     Given I am logged in as "jonathan"
-    And there is a draft blog post titled "I feel good"
-    When I go to the "I feel good" blog post's edit page
+    And there is a draft blog post
+    When I go to the blog post's edit page
     And I press "Publish"
     Then I should see a confirmation message
     Then the blog post should be published
