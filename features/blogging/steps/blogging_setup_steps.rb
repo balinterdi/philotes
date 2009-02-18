@@ -1,4 +1,4 @@
-Given /there is a blog called "(.*)"/ do |blog_name|
+Given /there is an? "(.*)" blog/ do |blog_name|
   Blog.first_or_create(:name => blog_name)
 end
 

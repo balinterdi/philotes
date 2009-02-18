@@ -5,8 +5,8 @@ Feature: edit blog
 
   Scenario: Publish blog
     Given I am logged in as "jonathan"
-    And there is a blog called "All about me"
+    And there is an "All about me" blog
     When I go to the "All about me" blog's edit page
     And I press "Publish blog"
     Then I should see a confirmation message
-    Then the "All about me" blog should be public
+    And the "All about me" blog should be public

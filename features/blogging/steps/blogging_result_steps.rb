@@ -18,6 +18,18 @@ Then /^the "(.*)" blog should be public/ do |blog_name|
   Blog.first(:name => blog_name).should be_published
 end
 
+Then /^the blog post should be created$/ do
+  BlogPost.first.should_not be_nil
+end
+
+Then /^the blog post should not be created$/ do
+  BlogPost.first.should be_nil
+end
+
+Then /^the blog post should be draft$/ do
+  BlogPost.first.state.should be_draft
+end
+
 Then /^the "(.*)" blog post should be draft/ do |post_title|
   BlogPost.first(:title => post_title).should be_draft
 end
