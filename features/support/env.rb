@@ -20,4 +20,6 @@ require "merb_cucumber/world/webrat"
 def Spec.run? ; true; end
 
 Merb.start_environment(:testing => true, :adapter => 'runner', :environment => ENV['MERB_ENV'] || 'test')
+DataMapper.setup(:default, :adapter => 'sqlite3', :database => 'philotes_testing.sqlite3')
+DataMapper.auto_migrate!
   
